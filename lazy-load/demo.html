@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Lazy Load Images After 5 Second Timeout</title>
+  <meta name="generator" content="Mephisto" />
+ 
+  
+</head>
+
+<body>
+  <div id="wrap"> 
+    <div id="header">
+      <p>
+        <h1>Lazy Load</h1><br />
+        <small>Image lazy loader plugin for jQuery.</small>
+        <ul id="nav">
+          <li id="first"><a href="/" class="active">weblog</a></li>
+          <li><a href="/projects" class="last">projects</a></li>
+          <!--
+          <li><a href="/cv" class="last">cv</a></li>
+        -->
+        </ul>
+      </p>
+    </div>
+    <div id="content">
+      
+  <h2>Plugin enabled</h2>
+  <div class="entry">
+    
+    <p>
+      plugin is enabled. Images are not loaded. Timeout will trigger five seconds after 
+      all other elements of page have been loaded. 
+    </p>
+  
+	<img data-ks-lazyload="http://www.appelsiini.net/projects/lazyload/img/bmw_m1_hood.jpg" alt="服饰" title="服饰">
+	<img data-ks-lazyload="http://www.appelsiini.net/projects/lazyload/img/bmw_m1_side.jpg" alt="服饰" title="服饰">
+	<img data-ks-lazyload="http://www.appelsiini.net/projects/lazyload/img/viper_1.jpg" alt="服饰" title="服饰">
+	<img data-ks-lazyload="http://www.appelsiini.net/projects/lazyload/img/viper_corner.jpg" alt="服饰" title="服饰">
+	<img data-ks-lazyload="http://www.appelsiini.net/projects/lazyload/img/bmw_m3_gt.jpg" alt="服饰" title="服饰">
+	<img data-ks-lazyload="http://www.appelsiini.net/projects/lazyload/img/corvette_pitstop.jpg" alt="服饰" title="服饰">
+
+    </div>
+    <div id="sidebar">
+
+  </div>
+  
+  <div id="footer">
+  </div>
+  
+ 
+	
+	
+
+</div>
+<script src="http://g.tbcdn.cn/kissy/k/1.3.1/seed.js" data-config="{combine:true}"></script>
+
+<script>
+    KISSY.use("datalazyload", function(S, DataLazyload) {
+        S.ready(function(S) {
+            var dl = DataLazyload();
+            dl.addCallback('#test-callback', function() {
+                alert('#test-callback will come!');
+            });
+        });
+    });
+</script>
+</body>
+</html>
