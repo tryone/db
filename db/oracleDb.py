@@ -5,6 +5,11 @@
 '''
 
 import cx_Oracle
+#
+# fisrt 乱码问题显示
+#
+import os 
+os.environ['NLS_LANG'] = 'SIMPLIFIED CHINESE_CHINA.UTF8' 
 
 class OracleDb:
     """  数据备份脚本 """
@@ -66,7 +71,7 @@ class OracleDb:
     
     def SaveOrUpdate(self, sql):
         self.cursor.execute(sql)
-        self.conn.commit()
+        self.db.commit()
         
     def GetMembers(self):
         selectSql = "select * from CMM_MEMBER"
